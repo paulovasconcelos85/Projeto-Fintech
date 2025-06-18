@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Financeiro</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    </head>
+<body>
+
+    <div class="d-flex" id="wrapper">
+
+<div class="bg-light border-right" id="sidebar-wrapper">
+            <div class="sidebar-heading">
+                <img src="./images/vector-leather-wallet-with-golden-coins-falling-it-isolated-white-background.png" alt="Carteira de couro com moedas, sugerindo prosperidade e organização financeira" class="mr-2 logo-custom" />
+            </div>
+            <div class="list-group list-group-flush">
+                <a href="#" class="list-group-item list-group-item-action bg-light active">Dashboard</a>
+                <a href="#" class="list-group-item list-group-item-action bg-light">Transações</a>
+                <a href="#" class="list-group-item list-group-item-action bg-light">Orçamentos</a>
+                <a href="#" class="list-group-item list-group-item-action bg-light">Configurações</a>
+            </div>
+            <div class="mt-auto p-3">
+                <button class="btn btn-primary btn-block mb-3">+ NOVA TRANSAÇÃO</button>
+                <div class="list-group list-group-flush">
+                    <a href="#" class="list-group-item list-group-item-action bg-light">Meus Dados</a>
+                    <a href="#" class="list-group-item list-group-item-action bg-light">Ajuda e suporte</a>
+                    <a href="#" class="list-group-item list-group-item-action bg-light">Sobre</a>
+                    <a href="#" class="list-group-item list-group-item-action bg-light text-danger">Sair</a>
+                </div>
+                <small class="text-muted d-block text-center mt-3">nomeusuario@email.com</small>
+            </div>
+        </div>
+        <div id="page-content-wrapper">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+                <div class="container-fluid">
+                    <button class="btn btn-primary d-block d-lg-none" id="menu-toggle">Menu</button>
+                    <h1 class="navbar-brand mb-0 h4 ml-auto ml-lg-0">Olá, Úsuário!</h1>
+                    <form class="d-flex d-none d-lg-block">
+                        <div class="input-group">
+                            <input class="form-control" type="search" placeholder="Digite aqui" aria-label="Search">
+                            <button class="btn btn-outline-secondary" type="submit">Procurar</button>
+                        </div>
+                    </form>
+                </div>
+            </nav>
+
+            <div class="container-fluid p-4">
+                <div class="row mb-4 align-items-center">
+                    <div class="col-md-6 col-sm-12 mb-3 mb-md-0">
+                        <h2 class="display-4 font-weight-bold">Saldo: R$ 1.000,00</h2>
+                    </div>
+                    <div class="col-md-6 col-sm-12 text-md-right text-left">
+                        <div class="btn-group" role="group" aria-label="Filtro de Tempo">
+                            <button type="button" class="btn btn-outline-primary">Dia</button>
+                            <button type="button" class="btn btn-outline-primary active">Mês</button>
+                            <button type="button" class="btn btn-outline-primary">Ano</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <div class="card shadow-sm h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Receitas</h5>
+                                        <p class="card-text text-success font-weight-bold">↑37%</p>
+                                        <p class="card-text">Em relação ao período anterior</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="card shadow-sm h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Despesas</h5>
+                                        <p class="card-text text-danger font-weight-bold">↓15%</p>
+                                        <p class="card-text">Em relação ao período anterior</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 mb-4">
+                                <div class="card shadow-sm h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Gráfico de desempenho financeiro - Receita vs. Despesa</h5>
+                                        <div class="chart-placeholder" style="height: 200px; background-color: #f8f9fa; border: 1px dashed #ced4da;">
+                                            <p class="text-center text-muted pt-5">Gráfico de Linha/Barras aqui</p>
+                                        </div>
+                                        <div class="d-flex justify-content-around mt-3 d-none d-lg-flex">
+                                            <small class="text-muted">Fevereiro/25</small>
+                                            <small class="text-muted">Março/25</small>
+                                            <small class="text-muted">Abril/25</small>
+                                            <small class="text-muted">Maio/25</small>
+                                            <small class="text-muted">Junho/25</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 mb-4 d-none d-lg-block">
+                                <div class="card shadow-sm h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Analisar por Data</h5>
+                                        <div class="calendar-grid">
+                                            <div class="calendar-day">1</div>
+                                            <div class="calendar-day">2</div>
+                                            <div class="calendar-day">...</div>
+                                            <div class="calendar-day selected">17</div>
+                                            <div class="calendar-day">...</div>
+                                            <div class="calendar-day">31</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="row">
+                            <div class="col-md-6 col-lg-12 mb-4">
+                                <div class="card shadow-sm h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Orçamento Lazer e Comida</h5>
+                                        <div class="progress mb-2">
+                                            <div class="progress-bar bg-warning" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
+                                        </div>
+                                        <small class="text-muted">Percentual já utilizado no mês</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-12 mb-4">
+                                <div class="card shadow-sm h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Orçamento Gasolina</h5>
+                                        <div class="progress mb-2">
+                                            <div class="progress-bar" role="progressbar" style="width: 30%;" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">30%</div>
+                                        </div>
+                                        <small class="text-muted">Percentual já utilizado no mês</small>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-lg-12 mb-4">
+                                <div class="card shadow-sm h-100">
+                                    <div class="card-body text-center">
+                                        <h5 class="card-title">Percentual de despesas</h5>
+                                        <div class="pie-chart-placeholder" style="width: 150px; height: 150px; border-radius: 50%; background: conic-gradient(
+                                            #dc3545 0% 30%,    /* Alimentação: Vermelho (danger) */
+                                            #ffc107 30% 55%,    /* Gasolina: Amarelo (warning) - 30+25 = 55 */
+                                            #007bff 55% 65%,    /* Aluguel: Azul (primary) - 55+10 = 65 */
+                                            #6c757d 65% 75%,    /* Plano de Saúde: Cinza (secondary) - 65+10 = 75 */
+                                            #17a2b8 75% 80%,    /* Faculdade: Ciano (info) - 75+5 = 80 */
+                                            #28a745 80% 85%,    /* Água, Luz, Telefone, Internet: Verde (success) - 80+5 = 85 */
+                                            #fd7e14 85% 97%,    /* Impostos: Laranja (orange) - 85+12 = 97 */
+                                            #6f42c1 97% 100%    /* Condomínio: Roxo (purple) - 97+3 = 100 */
+                                        ); margin: 0 auto;">
+                                            <div class="pie-chart-center"></div>
+                                        </div>
+                                        <ul class="list-unstyled mt-3 mb-0">
+                                            <li><span class="text-danger font-weight-bold">■</span> Alimentação: 30%</li>
+                                            <li><span class="text-warning font-weight-bold">■</span> Gasolina: 25%</li>
+                                            <li><span class="text-primary font-weight-bold">■</span> Aluguel: 10%</li>
+                                            <li><span class="text-secondary font-weight-bold">■</span> Plano de Saúde: 10%</li>
+                                            <li><span class="text-info font-weight-bold">■</span> Faculdade: 5%</li>
+                                            <li><span class="text-success font-weight-bold">■</span> Água, Luz, Telefone, Internet: 5%</li>
+                                            <li><span class="text-orange font-weight-bold">■</span> Impostos: 12%</li>
+                                            <li><span class="text-purple font-weight-bold">■</span> Lazer: 3%</li>
+                                        </ul>
+                                        <p class="mt-3">Conforme transações registradas no sistema</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-lg-12 mb-4">
+                                <div class="card shadow-sm h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Receitas totais no ano</h5>
+                                        <p class="card-text display-5 font-weight-bold text-primary">R$ 50K</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-12 mb-4">
+                                <div class="card shadow-sm h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Despesas totais no ano</h5>
+                                        <p class="card-text display-5 font-weight-bold text-danger">R$ 35K</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        </div>
+    <nav class="navbar fixed-bottom navbar-light bg-light d-lg-none d-block">
+        <div class="container-fluid d-flex justify-content-around">
+            <a class="nav-link text-center" href="#"><img src="./images/app-bolsa-de-valores.png" alt="Dashboard Icon" width="24" height="24"><br><small>Dashboard</small></a>
+            <a class="nav-link text-center" href="#"><img src="./images/app-wallet-passes.png" alt="Transações Icon" width="24" height="24"><br><small>Transações</small></a>
+            <a class="nav-link text-center" href="#">
+                <img src="./images/mais.png" alt="Nova Transação Icon" width="30" height="30" style="margin-bottom: -4px;"> <br><small>Nova Transação</small>
+            </a>
+            <a class="nav-link text-center" href="#"><img src="./images/despesas.png" alt="Orçamentos Icon" width="24" height="24"><br><small>Orçamentos</small></a>
+            <a class="nav-link text-center" href="#"><img src="./images/configuracao.png" alt="Configurações Icon" width="24" height="24"><br><small>Configurações</small></a>
+        </div>
+    </nav>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Opcional: Se precisar de toggle para a sidebar em mobile
+        // document.getElementById("menu-toggle").addEventListener("click", function() {
+        //     document.getElementById("wrapper").classList.toggle("toggled");
+        // });
+    </script>
+</body>
+</html>

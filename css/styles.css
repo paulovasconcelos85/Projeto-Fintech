@@ -1,0 +1,196 @@
+body {
+    overflow-x: hidden; 
+    background-color: #f4f7f6; 
+}
+
+.sidebar-heading img.logo-custom {
+    width: 40px;  
+    height: 40px; 
+    object-fit: contain; 
+    display: block;
+    margin-right: 10px; 
+}
+.sidebar-heading {
+    padding: 1.25rem 1.5rem;
+    font-size: 1.2rem;
+    background-color: #e9ecef;
+    border-bottom: 1px solid rgba(0,0,0,.125);
+    display: flex; /* Garante que os itens dentro do cabeçalho fiquem lado a lado */
+    align-items: center; /* Alinha verticalmente os itens ao centro */
+    justify-content: flex-start; /* Alinha os itens ao início (esquerda) */
+}
+/* Sidebar */
+#sidebar-wrapper {
+    min-height: 100vh;
+    margin-left: -15rem; /* Esconde a sidebar por padrão em mobile */
+    -webkit-transition: margin .25s ease-out;
+    -moz-transition: margin .25s ease-out;
+    -o-transition: margin .25s ease-out;
+    transition: margin .25s ease-out;
+    width: 15rem; /* Largura da sidebar */
+    position: fixed; /* Fixa a sidebar */
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+#sidebar-wrapper .sidebar-heading {
+    padding: 1.25rem 1.5rem;
+    font-size: 1.2rem;
+    background-color: #e9ecef;
+    border-bottom: 1px solid rgba(0,0,0,.125);
+    display: flex;
+    align-items: center;
+}
+
+#sidebar-wrapper .list-group {
+    width: 15rem;
+}
+
+#sidebar-wrapper .list-group-item {
+    border: none; /* Remove bordas dos itens da lista */
+    padding: 1rem 1.5rem;
+    font-size: 1.05rem;
+}
+
+#sidebar-wrapper .list-group-item.active {
+    background-color: #007bff !important;
+    color: white;
+}
+
+/* Conteúdo da Página */
+#page-content-wrapper {
+    min-width: 100vw;
+    margin-left: 0; /* Por padrão, o conteúdo ocupa a largura total */
+    padding-left: 0; /* No mobile, não há espaço para a sidebar */
+}
+
+/* Transição do wrapper para sidebar visível */
+#wrapper.toggled #sidebar-wrapper {
+    margin-left: 0;
+}
+
+#wrapper.toggled #page-content-wrapper {
+    margin-left: 15rem;
+}
+
+/* Menu inferior para mobile */
+.fixed-bottom {
+    border-top: 1px solid #dee2e6;
+    background-color: #fff !important;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+}
+
+.fixed-bottom .nav-link {
+    padding: .5rem .25rem;
+    font-size: .75rem;
+    color: #495057;
+}
+
+.fixed-bottom .nav-link img {
+    display: block;
+    margin: 0 auto 5px;
+}
+
+/* Estilos de Cards */
+.card {
+    border-radius: .75rem;
+    border: none;
+    overflow: hidden;
+}
+
+.card-title {
+    font-weight: bold;
+    color: #343a40;
+}
+
+/* Placeholder de Gráfico */
+.chart-placeholder, .pie-chart-placeholder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #6c757d;
+    font-size: 0.9em;
+    border-radius: .5rem;
+}
+
+.pie-chart-placeholder {
+    position: relative;
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.05); /* Efeito de borda do gráfico */
+}
+
+.pie-chart-center {
+    position: absolute;
+    background-color: white;
+    width: 80px; /* Tamanho do círculo central */
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: #343a40;
+}
+
+
+/* Grid de Calendário */
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    text-align: center;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: .5rem;
+}
+
+.calendar-day {
+    padding: 8px 5px;
+    border-radius: 5px;
+    background-color: #e9ecef;
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+.calendar-day.selected {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+}
+
+
+/* Responsividade para Telas Grandes (PC) */
+@media (min-width: 992px) {
+    #sidebar-wrapper {
+        margin-left: 0; /* Sidebar sempre visível em PC */
+    }
+
+    #page-content-wrapper {
+        margin-left: 15rem;
+        min-width: calc(100vw - 15rem);
+    }
+
+    #wrapper.toggled #sidebar-wrapper {
+        margin-left: -15rem;
+    }
+
+    #wrapper.toggled #page-content-wrapper {
+        margin-left: 0;
+    }
+
+    .d-lg-none {
+        display: none !important; /* Esconde o menu inferior em PC */
+    }
+
+    .d-none.d-lg-block {
+        display: block !important; /* Mostra a barra de busca em PC */
+    }
+}
+
+@media (max-width: 991.98px) { /* Aplica para telas menores que 992px (o breakpoint 'lg') */
+    #page-content-wrapper {
+        padding-bottom: 80px; /* Ajuste este valor conforme a altura real da sua navbar inferior */
+        /* Se 80px for muito ou pouco, aumente ou diminua. */
+    }
+}
